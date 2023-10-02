@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Money Splitter</title>
+<link src="/styles.css">
+</head>
+<body onload="check()">
+    
+ <div class="appbar">
+     <h1 class="title">Division Calculator</h1>
+ </div>
+ 
+<div class="spliting">
+    <section style="text-align:center;margin-bottom:20px;">
+    <p style="margin-bottom:24px;font-size:38px;">Enter Amount</p>
+    <input class="inputBar" type="number" id="number" onkeypress=" if(event.keyCode === 13){ divide(); } "/>
+    <button class="splitButton" onclick="divide()">Split</button>
+
+</section>
+<section class="tempHolder">
+    <h3>Hello</h3>
+    <p>amount</p><p id="change">change</p></section>
+</div>
+<div class="item-container" id="parentDiv">
+    <div class="items">
+        <div class="edit-container">
+            <input class="textSpan" type="text" readonly="readonly" onkeydown="if(event.keyCode === 13) {outOfFocus(event);} " placeholder="Empty">
+            <svg width="26" height="26" fill="currentColor" onclick="deleteItem()" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+            <svg width="26" height="26" stroke-width="1.5" onclick="edit()" viewBox="0 0 24 24" fill="none"> <path d="M13.0207 5.82839L15.8491 2.99996L20.7988 7.94971L17.9704 10.7781M13.0207 5.82839L3.41405 15.435C3.22652 15.6225 3.12116 15.8769 3.12116 16.1421V20.6776H7.65669C7.92191 20.6776 8.17626 20.5723 8.3638 20.3847L17.9704 10.7781M13.0207 5.82839L17.9704 10.7781" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+        </div>
+        <div >
+            <div id="amount-1" class="amountHold"></div>
+        </div>
+   </div>
+    
+    <div class="items">
+        <div><span>hi</span></div>
+        <p id="amount-1"></p>
+    </div>
+    <div class="items">
+        <div><span>hi</span></div>
+        <p id="amount-2"></p>
+    </div>
+    <div class="addItem items" id="add"><span onclick="addDivs()">+</span></div>    
+</div>
+<div class="prompt-window"><h3>Do you want to remove this pocket</h3><button onclick="hidePrompt()">Ok</button><button onclick="hidePrompt()">Cancel</button></div>
+
+</body>
+</html>
